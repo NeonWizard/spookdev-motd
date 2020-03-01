@@ -2,5 +2,5 @@
 
 source /etc/update-motd.d/colors.txt
 
-echo -e ${DEFAULT_COLOR}; toilet -d /etc/update-motd.d/ -f ivrit "spookdev"
+echo -e ${DEFAULT_COLOR}; toilet -d /etc/update-motd.d/ -f ivrit "spookydev"
 echo ""
