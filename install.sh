@@ -2,8 +2,8 @@
 
 # Install packages
 apt update
-apt install toilet
-apt install update-notifier
+apt install toilet -y
+apt install update-notifier -y
 
 # Download the archive
 curl -L https://github.com/NeonWizard/spookdev-motd/archive/master.tar.gz | tar -zxv
