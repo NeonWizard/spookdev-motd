@@ -6,4 +6,4 @@ AVAIL="$(df --output=avail -h / | tail -1 | xargs)"
 USED="$(df --output=used -h / | tail -1 | xargs)"
 TOTAL="$(df --output=size -h / | tail -1 | xargs)"
 
-echo -e " ${TITLE_COLOR}Disk................:${NC} Used: ${TEXT_COLOR}$(echo $USED | sed s/[A-Z]*//g)${NC} $(echo $USED | sed s/[0-9]*//g)B | Free: ${TEXT_COLOR}$(echo $AVAIL | sed s/[A-Z]*//g)${NC} $(echo $AVAIL | sed s/[0-9]*//g)B | Total: ${TEXT_COLOR}$(echo $TOTAL | sed s/[A-Z]*//g)${NC} $(echo $TOTAL | sed s/[0-9]*//g)B"
+echo -e " ${TITLE_COLOR}Disk................:${NC} Used: ${TEXT_COLOR}$(echo $USED | sed s/[A-Z]*//g)${NC} $(echo $USED | sed s/[^a-zA-Z]*//g)B | Free: ${TEXT_COLOR}$(echo $AVAIL | sed s/[A-Z]*//g)${NC} $(echo $AVAIL | sed s/[^a-zA-Z]*//g)B | Total: ${TEXT_COLOR}$(echo $TOTAL | sed s/[A-Z]*//g)${NC} $(echo $TOTAL | sed s/[^a-zA-Z]*//g)B"
